@@ -30,8 +30,8 @@ spring:
       hibernate: 
        format_sql: true
        show_sql: true
-   # open-in-view: false
-   # generate-ddl: true
+    open-in-view: false
+    generate-ddl: true
 
   rabbitmq:
     addresses: ${CLOUDAMQP_URL}
