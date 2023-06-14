@@ -1,6 +1,6 @@
 
 server:
-  port: 7130 #${PORT}
+  port: ${PORT}
   servlet:
     context-path: '/ead-authuser/'
 
