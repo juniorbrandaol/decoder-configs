@@ -1,4 +1,3 @@
-
 server:
   port: ${PORT}
   servlet:
@@ -8,41 +7,29 @@ spring:
   application:
     name: ead-authuser-service
   datasource:
-    url: ${JDBC_DATABASE_URL} 
+    url:  ${JDBC_DATABASE_URL}
     username: ${JDBC_DATABASE_USERNAME}
     password: ${JDBC_DATABASE_PASSWORD}
-  cloud:
-    openfeign:
-      client:
-        config:
-          default:
-            connectTimeout: 5000
-            readTimeout: 5000
-            loggerLevel: basic
-    config: false
   jpa:
     hibernate:
       ddl-auto: update
       dialect: org.hibernate.dialect.PostgreSQLDialect
       jdbc:
-        lob.non_contextual_creation: true
+        lob.non-contextual-creation: true
     properties:
-      hibernate: 
-       format_sql: true
-       show_sql: true
-    open-in-view: false
-    generate-ddl: true
-
+      hibernate:
+        show_sql: true
   rabbitmq:
     addresses: ${CLOUDAMQP_URL}
 
 ead:
-  serviceRegistry:
-    username: serviceregistry
-    password: 'ead1224service'
   api:
     url:
       course: 'http://ead-course-service/ead-course'
+  broker:
+    exchange:
+      userEvent: ead.userevent
+
 
 management:
   endpoints:
@@ -51,24 +38,20 @@ management:
         include:
           - refresh
           - health
-  
 
-#Configuração do resilliebce4j a nivel de método. criamos as instancias(name) ex:curcuitbreakerInstance, retryIntance
-#O retry é uma das possibilidades de implementação de um broker. temos o circuitbreaker tambem
+
 resilience4j:
   circuitbreaker:
     instances:
-      curcuitbreakerInstance:
-        slidingWindowSize: 30 #para cada 30 tentativas
+      circuitbreakerInstance:
+        slidingWindowSize: 30
         permittedNumberOfCallsInHalfOpenState: 2
         slidingWindowType: TIME_BASED
-        minimumNumberOfCalls: 2 # após duas chamadas, ele levará em conta a porcentagem de falhas
-        waitDurationInOpenState: 30s # período de tempo que o circuto fica em um certo estado, depois muda
-        failureRateThreshold: 80  #porcentagem aceita de falhas
+        minimumNumberOfCalls: 2
+        waitDurationInOpenState: 30s
+        failureRateThreshold: 80
   retry:
     instances:
-      retryIntance:
-        maxAttempts: 3
+      retryInstance:
+        maxRetryAttempts: 3
         waitDuration: 5s
-
-

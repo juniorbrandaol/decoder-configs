@@ -1,4 +1,3 @@
-#porta do gateway
 server:
   port: ${PORT}
 
@@ -16,10 +15,7 @@ spring:
           uri: lb://EAD-COURSE-SERVICE
           predicates:
             - Path=/ead-course/**
-        -  id: notification-service
-           uri: lb://EAD-NOTIFICATION-SERVICE
-           predicates:
-             - Path=/ead-notification/**
-
-
-
+        - id: notification-service
+          uri: lb://EAD-NOTIFICATION-SERVICE
+          predicates:
+            - Path=/ead-notification/**
