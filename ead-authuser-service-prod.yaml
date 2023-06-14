@@ -37,6 +37,9 @@ spring:
     addresses: ${CLOUDAMQP_URL}
 
 ead:
+  serviceRegistry:
+    username: serviceregistry
+    password: 'ead1224service'
   api:
     url:
       course: 'http://ead-course-service/ead-course'
