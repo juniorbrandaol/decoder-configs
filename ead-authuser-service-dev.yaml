@@ -6,7 +6,8 @@ spring:
   application:
     name: ead-authuser-service
   datasource:
-    url: jdbc: postgresql://localhost:5432/ead-authuser-v2
+    url:
+      jdbc: postgresql://localhost:5432/ead-authuser-v2
     username: postgres
     password: 1224
   cloud:
@@ -25,7 +26,8 @@ spring:
       jdbc:lob: non_contextual_creation= true
     show_sql: true
     properties:
-      hibernate: format_sql: true
+      hibernate:
+       format_sql: true
     open-in-view: false
     generate-ddl: true
 
