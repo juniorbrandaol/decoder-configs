@@ -61,7 +61,7 @@ ead:
   api:
     url:
       course: 'http://ead-course-service/ead-course'
-  broker:
+  brocker:
     exchange:
       userEventExchange: ead.userevent
     queue:
