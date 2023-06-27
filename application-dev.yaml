@@ -1,17 +1,16 @@
 
-
-
+#Srpring security
 ead:
   serviceRegistry:
     username: serviceregistry
     password: 'ead1224service'
   auth:
-    jwtSecret: t7w!z%C*F-JaNdRgUkXp2s5v8x/A?D(G+KbPeShVmYq3t6w9z$B&E)H@McQfTjWn
-    jwtExpirationMs: 14400000
+    jwtSecret: VkXp2s5v8y/B?E(H+MbQeThWmZq3t6w9z$C&F)J@NcRfUjXn2r5u7x!A%D*G-KaP
+    jwtExpirationMs: 14400000  
 
 eureka:
   client:
-    serviceUrl:
+    service-url:
       defaultZone: 'http://${ead.serviceRegistry.username}:${ead.serviceRegistry.password}@localhost:8761/eureka'
   instance:
-    hostname: localhost
+    hostname : localhost
