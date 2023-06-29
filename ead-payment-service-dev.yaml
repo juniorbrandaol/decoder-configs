@@ -75,8 +75,8 @@ ead:
     key:
       paymentCommandKey: ms.payment
   stripe:
-    secretKey: '{cipher}4da19baf4a82edcc3818f9d059fc725a02c7e00fc4ccc7ba5d7f62e0e83447216a6db7a0554323e225763baf60e8e21e2f7dd68c1545c1210c0ebbc7e9f403e8807d1ec4d4c84d543db38e8f5ec3f7721d09f54d236a729f0049560ee196420fbd1836dcfa4712785a7d4e7d4c639b7d873fb1398a90a181bddb1937c8ad8a7df1bd40519bc07db9f153062f120c1195'
-    
+     secretKey: '{cipher}78b245ed2c90264248cb64b1bc015ff2adc12588211b8b857940a6b84f9024e8a70563ac4c49997a5d99705c451e0d7058a1db152eb3f4706d1ccc014594e77f12fccab6f1bb4a29c0656e570da2c70a0298d5ab3376ad149ccdabba6ad17d59384fb059b2c059682eec95bdc4cc1d31b41c92978ed875199cf2369fa72657e1ef3cb106a5ef23c0185b2bda7b891e75'
+
 
 #Configuração do resilliebce4j a nivel de método. criamos as instancias(name) ex:curcuitbreakerInstance, retryIntance
 #O retry é uma das possibilidades de implementação de um broker. temos o circuitbreaker tambem
