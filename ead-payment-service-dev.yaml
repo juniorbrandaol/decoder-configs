@@ -75,7 +75,7 @@ ead:
     key:
       paymentCommandKey: ms.payment
   stripe:
-     secretKey: '{cipher}78b245ed2c90264248cb64b1bc015ff2adc12588211b8b857940a6b84f9024e8a70563ac4c49997a5d99705c451e0d7058a1db152eb3f4706d1ccc014594e77f12fccab6f1bb4a29c0656e570da2c70a0298d5ab3376ad149ccdabba6ad17d59384fb059b2c059682eec95bdc4cc1d31b41c92978ed875199cf2369fa72657e1ef3cb106a5ef23c0185b2bda7b891e75'
+     secretKey: 'sk_test_51NOMcrGM3N93KY1M4H8BfWHpQAFjM7V1b2uCgvDnV5Ezsk3MQTPpGabcbhrIu8I6JrpfLWuGEGr6o480DYiHYJ8U001dvNbLAZ'
 
 
 #Configuração do resilliebce4j a nivel de método. criamos as instancias(name) ex:curcuitbreakerInstance, retryIntance
